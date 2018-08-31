@@ -1,0 +1,63 @@
+<header ng-class="style.header" class="ng-cloak">
+    <div ng-class="style.headerBox">
+        <div ng-class="style.logoBox">
+            <div ng-class="style.logoDiv">
+                <div ng-class="style.logoWrap">
+                    <h2 ng-class="style.boxTitle">{{zhEn.blockchain[language]}}</h2>
+                </div>
+                <p ng-click="changeLanguage()" ng-bind="language==='zh' ? 'EN' : '中文' " ng-class="style.language"></p>
+            </div>
+        </div>
+        <div ng-class="style.dataBox">
+            <div ng-class="style.dataWrap">
+                <div ng-class="style.content">
+                    <p ng-class="style.dataTitle">
+                        <img src="../../../assets/images/data_icon_3.png" alt="placeholder">
+                        <span ng-bind="zhEn.blockHeight[language]"></span>
+                    </p>
+                    <p ng-class="style.dataCountWrap">
+                        <span ng-class="style.dataCount" ng-if="blockHeight || blockHeight ===0" ng-bind="blockHeight"></span>
+                    </p>
+                </div>
+                <div ng-class="style.line"></div>
+            </div>
+            <p5 sketch="pointLineFactory"></p5>
+            <div ng-class="style.dataWrap">
+                <div ng-class="style.line"></div>
+                <div ng-class="style.content">
+                    <p ng-class="style.dataTitle">
+                        <img src="../../../assets/images/data_icon_4.png" alt="placeholder">
+                        <span ng-bind="zhEn.nodes[language]"></span>
+                    </p>
+                    <p ng-class="style.dataCountWrap">
+                        <span ng-class="style.dataCount" ng-if="block.nodeNumber || block.nodeNumber ===0" ng-bind="block.nodeNumber"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div ng-class="style.canvasTip">
+            <span>
+                <i ng-class="style.white"></i>
+                <label ng-bind="zhEn.clientNode[language]"></label>
+            </span>
+            <span>
+                <i ng-class="style.yellow"></i>
+                <label ng-bind="zhEn.activeNode[language]"></label>
+            </span>
+            <span>
+                <i ng-class="style.orange"></i>
+                <label ng-bind="zhEn.newlyJoinedNode[language]"></label>
+            </span>
+        </div>
+    </div>
+</header>
+<div class="viewChangeAnimate ng-cloak" ui-view></div>
+<div class="popupWrap blue" ng-show="isPopupShow">
+    <div class="popup">
+        <div class="popupClose" ng-click="block.popupFn()"></div>
+        <span ng-bind="popupContent"></span>
+    </div>
+</div>
+<div class="popupWrap blue" ng-show="isLoadingShow">
+    <img src="../../../assets/images/loading.gif" alt="loading">
+</div>

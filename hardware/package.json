@@ -1,0 +1,19 @@
+{
+    "name": "hello",
+    "version": "0.1.0",
+    "description": "Hello",
+    "author": "simon",
+    "main": "src/index.js",
+    "ruff": {
+        "boards": {
+            "ruff-mbd-v1": "^4.2.2",
+            "*": "*"
+        },
+        "dependencies": {
+            "mh-fmg": "^1.1.1",
+            "button-gpio": "^2.0.6",
+            "buzzer-gpio": "^0.2.5"
+        },
+        "devDependencies": {}
+    }
+}

@@ -1,0 +1,59 @@
+<!-- <div class="detail" ng-if="transactionHash===arr.transactionHash"> -->
+    <div class="detailL">
+        <dl>
+            <dt ng-bind="zhEn.transactionDetails[language]"><!-- 交易信息 --></dt>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.blockHash[language]"><!-- 区块编号 --></p>
+                <p class="ddText" ng-bind="queryInfo.hash"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.applicationCity[language]"><!-- 申请城市 --></p>
+                <p class="ddText" ng-bind="queryInfo.appCity"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.applicationDate[language]"><!-- 申请时间 --></p>
+                <p class="ddText" ng-bind="queryInfo.applyDate | date:'yyyy-MM-dd HH:mm:ss' "></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.industry[language]"><!-- 公司行业 --></p>
+                <p class="ddText" ng-bind="queryInfo.category"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.companyName[language]"><!-- 公司名称 --></p>
+                <p class="ddText" ng-bind="queryInfo.companyName"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.loanSerialNumber[language]"><!-- 第三方借款编号 --></p>
+                <p class="ddText" ng-bind="queryInfo.externalId"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.loanTerm[language]"><!-- 贷款期限 --></p>
+                <p class="ddText" ng-bind="queryInfo.loanMaturityByDay"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.orderDate[language]"><!-- 订单日期 --></p>
+                <p class="ddText" ng-bind="queryInfo.orderDate | date:'yyyy-MM-dd HH:mm:ss' "></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.repaymentMethod[language]"><!-- 还款方式 --></p>
+                <p class="ddText" ng-bind="queryInfo.paymentMethod"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.loanPurpose[language]"><!-- 贷款目的 --></p>
+                <p class="ddText" ng-bind="queryInfo.purpose"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.loanScenario[language]"><!-- 场景 --></p>
+                <p class="ddText" ng-bind="queryInfo.scene"></p>
+            </dd>
+            <dd>
+                <p class="ddTitle" ng-bind="zhEn.loanStatus[language]"><!-- 贷款状态 --></p>
+                <p class="ddText" ng-bind="queryInfo.status"></p>
+            </dd>
+        </dl>
+    </div>
+    <div class="detailR">
+        <div class="logoTitle" ng-bind="zhEn.Company[language]"><!-- 公 司 --></div>
+        <div class="logoImg"><img src="../../../../assets/images/green_logo.png" alt="logo"></div>
+    </div>
+<!-- </div> -->

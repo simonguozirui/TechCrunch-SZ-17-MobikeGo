@@ -1,0 +1,16 @@
+<div class="contentWrap" ng-class="style.homeView">
+    <h2 ng-class="style.boxTitle">{{zhEn.rentalApp[language]}}</h2>
+    <div ng-class="style.rentalBox">
+        <div>
+            <label ng-class="style.inputLabel">{{zhEn.user[language]}}</label>
+            <input type="text" ng-disabled="true" placeholder="{{zhEn.user[language]}}" ng-model="rental.user">
+        </div>
+        <div>
+            <label ng-class="style.inputLabel">{{zhEn.balance[language]}}</label>
+            <input type="text" ng-disabled="true" placeholder="{{zhEn.balance[language]}}" ng-model="rental.balance">
+        </div>
+        <input type="button" ng-disabled="executing" value="{{zhEn[rental.action][language]}}" ng-click="rental.invoke()">
+    </div>
+    <p ng-class="style.timerLabel" ng-show="rental.started">{{zhEn.rentalDuration[language]}}：<span ng-bind="rental.rentalDuration"></span>{{zhEn.second[language]}}</p>
+    <p ng-class="style.costLabel" ng-show="!rental.started&&rental.inited">{{zhEn.rentalCost[language]}}：<span ng-bind="rental.rentalCost"></span></p>
+</div>

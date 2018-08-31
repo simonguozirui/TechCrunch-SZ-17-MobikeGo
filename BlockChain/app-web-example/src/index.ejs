@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>点融区块链</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <% if (htmlWebpackPlugin.files.favicon) { %>
+    <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
+    <% } %>
+    <!-- incompatible browser -->
+    <style> .incompatibleBrowser { display: none; } </style>
+</head>
+
+<body>
+    <!-- incompatible browser -->
+    <div id="incompatibleBrowser" class="incompatibleBrowser">
+        Yout Browser is outdated. Please update your browser for better experience.
+    </div>
+    <!-- loader -->
+    <div class="loader"></div>
+    <!-- main app -->
+    <div class="container" ui-view></div>
+<!--     <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> -->
+    <!-- incompatible browser -->
+    <style> .no-js .incompatibleBrowser { display: block; } </style>
+</body>
+</html>

@@ -1,0 +1,25 @@
+app:
+  chains:
+    mychain1:
+      caserver: http://caserver:7054
+      peers: peer0@grpc://peer0:7051, peer1@grpc://peer1:17051, peer2@grpc://peer1:27051, peer3@grpc://peer1:37051
+      orderers: orderer0@grpc://orderer0:7050
+      eventhubs: peer0@grpc://peer0:7053
+      channels:
+        testchannel2017:
+          peers: peer0
+          orderers: orderer0
+          eventhubs: peer0
+      channeltx:
+        path: src/resources/channeltx/
+      chaincode:
+        path: src/resources/chaincode/
+        endorsementpolicy: src/resources/policy/endorsementpolicy.yaml
+      user:
+        name: cli
+        mspid: Org0MSP
+        affiliation: Org0
+        certpath: /Users/martintsang/Documents/Development/Techcrunch/任务资源/Task1/baas-sdk-sample-application/app-example/src/resources/msp/signcerts/cert.pem
+        keystorepath: /Users/martintsang/Documents/Development/Techcrunch/任务资源/Task1/baas-sdk-sample-application/app-example/src/resources/msp/keystore/key.pem
+      proposal:
+        waittime: 30000
